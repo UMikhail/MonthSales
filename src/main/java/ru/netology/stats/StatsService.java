@@ -10,11 +10,13 @@ public class StatsService {
     }
 
     public int averageAmountSales(int[] sales) {
-        int avTotal = 0;
-        for (int i = 0; i < sales.length; i++) {
-            avTotal = avTotal + sales[i];
-        }
-        return avTotal / sales.length;
+        int avTotal = amountAllSales(sales)/sales.length;
+        //int avTotal = 0;
+        //for (int i = 0; i < sales.length; i++) {
+            //avTotal = avTotal + sales[i];
+        //}
+        //return avTotal / sales.length;
+        return avTotal;
     }
 
     public int maxSales(int[] sales) {
@@ -44,11 +46,11 @@ public class StatsService {
     }
 
     public int totalMonthBelowAvSales(int[] sales) {
-        int avTotal = 0;
-        for (int i = 0; i < sales.length; i++) {
-            avTotal = avTotal + sales[i];
-        }
-        int value = avTotal / sales.length;
+        //int avTotal = 0;
+        //for (int i = 0; i < sales.length; i++) {
+            //avTotal = avTotal + sales[i];
+        //}
+        int value = averageAmountSales(sales); //avTotal / sales.length;
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < value)
@@ -58,11 +60,11 @@ public class StatsService {
     }
 
     public int totalMonthHigherAvSales(int[] sales) {
-        int avTotal = 0;
-        for (int i = 0; i < sales.length; i++) {
-            avTotal = avTotal + sales[i];
-        }
-        int value = avTotal / sales.length;
+        //int avTotal = 0;
+        //for (int i = 0; i < sales.length; i++) {
+            //avTotal = avTotal + sales[i];
+        //}
+        int value = averageAmountSales(sales); //avTotal / sales.length;
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > value)
